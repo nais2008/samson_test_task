@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "apps.homepage.apps.HomepageConfig",
+    "apps.news.apps.NewsConfig",
+    "apps.users.apps.UsersConfig",
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,10 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
+    },
 }
+
+AUTH_USER_MODEL = "users.User"
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -110,9 +115,9 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/user/login/"
 PASSWORD_RESET_REDIRECT_URL = "/user/login/"
 PASSWORD_CHANGE_REDIRECT_URL = "/"
-# AUTHENTICATION_BACKENDS = [
-#     "apps.users.backends.EmailBackend",
-# ]
+AUTHENTICATION_BACKENDS = [
+    "apps.users.backends.EmailBackend",
+]
 
 LANGUAGE_CODE = "en-us"
 LANGUAGES = [

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252837;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333649;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #444861;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex: 1;
+}
+
+.content {
+	position: relative;
+  height: 100vh;
+}
+
+.content h1 {
+	color: #fff;
+  font-size: 4em;
+	position: absolute;
+}
+
+.content h1:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #000;
+}
+
+.content h1:nth-child(2) {
+	color: color-mix(in srgb, #000 60%, #fff);
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}

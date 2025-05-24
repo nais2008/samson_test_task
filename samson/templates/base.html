@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>{{ title }}</title>
+    {% load static %}
+    {% load i18n %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock extra_css %}
+    <!-- Fav-icons -->
+    <link rel="icon" type="image" href="{% static 'img/favicon.ico' %}" />
+    <link rel="icon"
+        type="image"
+        href="{% static 'img/favicon-96x96.png' %}"
+        sizes="96x96" />
+    <link rel="icon" type="image" href="{% static 'img/favicon.svg' %}" />
+    <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="{% static 'img/apple-touch-icon.png' %}" />
+    <link rel="manifest" href="{% static 'img/site.webmanifest' %}" />
+  </head>
+  <body>
+    <div id="root">
+      {% include 'includes/header.html' %}
+      <main>
+        {% block content %}
+          <div class="content">
+            <h1 class="no-content">{% translate 'GG, no content today :(' %}</>
+            <h1 class="no-content">{% translate 'GG, no content today :(' %}</>
+          </div>
+        {% endblock content %}
+      </main>
+      {% include 'includes/footer.html' %}
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock extra_js %}
+    <script>
+      let footerTime = document.querySelector(".footer__time")
+
+      let serverDateTime = new Date("{% now 'n j Y h:i:s' %}")
+      let clientDateTime = new Date(Date.now())
+      let timeDifference = Math.abs(clientDateTime - serverDateTime)
+      timeDifference = timeDifference / 1000 / 60 / 60 / 24
+      if (timeDifference < 1){
+        footerTime.innerHTML = clientDateTime.getFullYear();
+      }
+    </script>
+  </body>
+</html>
