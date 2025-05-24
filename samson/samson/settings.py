@@ -28,15 +28,16 @@ ALLOWED_HOSTS = os.environ.get(
 DEFAULT_USER_IS_ACTIVE = get_true_or_false_env("DJANGO_DEFAULT_USER_IS_ACTIVE")
 
 INSTALLED_APPS = [
+    "apps.homepage.apps.HomepageConfig",
+    "apps.news.apps.NewsConfig",
+    "apps.users.apps.UsersConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.homepage.apps.HomepageConfig",
-    "apps.news.apps.NewsConfig",
-    "apps.users.apps.UsersConfig",
+    "sorl.thumbnail",
 ]
 
 MIDDLEWARE = [

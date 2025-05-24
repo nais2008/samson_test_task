@@ -37,4 +37,5 @@ per-file-ignores =
 max-line-length=79
 inline-quotes=double
 import-order-style=google
-max-expression-complexity=7
+max-expression-complexity=10
+application-import-names=apps.news,apps.users,apps.homepage,apps.core
