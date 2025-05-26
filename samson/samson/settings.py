@@ -111,10 +111,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_URL = "/user/login/"
+LOGIN_URL = "/users/login/"
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/user/login/"
-PASSWORD_RESET_REDIRECT_URL = "/user/login/"
+LOGOUT_REDIRECT_URL = "/users/login/"
+PASSWORD_RESET_REDIRECT_URL = "/users/login/"
 PASSWORD_CHANGE_REDIRECT_URL = "/"
 AUTHENTICATION_BACKENDS = [
     "apps.users.backends.EmailBackend",

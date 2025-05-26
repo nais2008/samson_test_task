@@ -1,5 +1,6 @@
 import django.conf
 import django.conf.urls.static
+import django.conf.urls.i18n
 import django.contrib
 import django.urls
 
@@ -12,7 +13,19 @@ urlpatterns = [
         "",
         django.urls.include("apps.homepage.urls"),
     ),
+    django.urls.path(
+        "news/",
+        django.urls.include("apps.news.urls"),
+    ),
+    django.urls.path(
+        "users/",
+        django.urls.include("apps.users.urls"),
+    ),
 ]
+
+urlpatterns += django.conf.urls.i18n.i18n_patterns(
+    django.urls.path("i18n/", django.urls.include("django.conf.urls.i18n")),
+)
 
 if django.conf.settings.DEBUG:
     import debug_toolbar

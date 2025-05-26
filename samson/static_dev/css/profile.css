@@ -1,0 +1,122 @@
+/* .profile{
+  display: flex;
+
+  .block{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .profile__left{
+    gap: 10px;
+    align-items: center;
+
+    img{
+      width: 300px;
+    }
+  }
+} */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 45px;
+  width: 1500px;
+  background-color: var(--second-color);
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 40px;
+
+  .profile__left {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .profile__image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      object-position: center;
+      border: var(--border);
+      box-shadow: var(--shadow);
+      color: var(--text-color);
+      border-radius: 50%;
+      overflow: hidden;
+      display: grid;
+      place-content: center;
+    }
+
+    input[type="file"] {
+      position: relative;
+      padding-left: 210px;
+      overflow: hidden;
+    }
+
+    input[type="file"]::file-selector-button {
+      background-color: var(--back-color);
+      box-shadow: var(--shadow-inset);
+      border: var(--border);
+      transition: all .2s;
+      cursor: pointer;
+      color: var(--text-color);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+    }
+
+    .btn {
+      padding: 20px 15px;
+      width: 100%;
+      text-align: center;
+
+      &:hover {
+        background-color: var(--back-btn-del);
+      }
+    }
+  }
+
+  .profile__right {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: .5;
+
+    .btn {
+      font-size: 20px;
+      padding: 20px 15px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .red {
+      display: none;
+    }
+    input:focus+label,
+    input:not(:placeholder-shown):valid+label,
+    select:focus+label,
+    select:not(:placeholder-shown):valid+label {
+      top: -25px;
+      scale: .95;
+    }
+  }
+
+  .btn_profile {
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 15px;
+    flex-basis: 100%;
+  }
+}

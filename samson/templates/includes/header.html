@@ -1,11 +1,47 @@
+{% load static %}
+{% load i18n %}
+
 <header>
   <a href="{% url 'homepage:homepage' %}" class="logo">Samson</a>
   <nav>
     <ul>
       <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+          <select name="language" onchange="this.form.submit()">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% for lang in LANGUAGES %}
+              <option value="{{ lang.0 }}"
+                {% if lang.0 == LANGUAGE_CODE %}selected{% endif %}>{{ lang.1 }}
+              </option>
+            {% endfor %}
+          </select>
+        </form>
+      </li>
+      {% if request.user.is_authenticated %}
+        {% if user.image %}
+          <li>
+            <a href="{% url 'users:profile' %}" class="btn btn_prof">
+              <img src="{{ user.image.url }}" alt="{% translate 'error' %}">
+            </a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{% url 'users:profile' %}" class="btn btn_prof">
+              <img src="{% static 'img/no-avatar.jpg' %}" alt="{% translate 'error' %}">
+            </a>
+          </li>
+        {% endif %}
+      {% else %}
+        <li>
+          <a href="{% url 'users:login' %}" class="btn btn_login">{% translate 'Log In' %}</a>
+        </li>
+        <li>
+          <a href="{% url 'users:signup' %}" class="btn btn_signup">{% translate 'Sign Up' %}</a>
+        </li>
+      {% endif %}
     </ul>
   </nav>
 </header>
