@@ -3,6 +3,8 @@
 import os
 import sys
 
+__all__ = ()
+
 
 def main():
     """Run administrative tasks."""

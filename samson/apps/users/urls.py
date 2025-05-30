@@ -83,4 +83,3 @@ urlpatterns = [
         name="signup",
     ),
 ]
-

@@ -16,7 +16,7 @@ def get_true_or_false_env(par: str) -> bool:
 
 BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "yuor_secret_key")
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "your_secret_key")
 
 DEBUG = get_true_or_false_env("DJANGO_DEBUG")
 
@@ -25,7 +25,11 @@ ALLOWED_HOSTS = os.environ.get(
     "127.0.0.1,localhost",
 ).split(",")
 
-DEFAULT_USER_IS_ACTIVE = get_true_or_false_env("DJANGO_DEFAULT_USER_IS_ACTIVE")
+DEFAULT_USER_IS_ACTIVE = get_true_or_false_env(
+    "DJANGO_DEFAULT_USER_IS_ACTIVE",
+)
+
+MAIL = os.environ.get("DJANGO_MAIL", "your_mail@mail.ru")
 
 INSTALLED_APPS = [
     "apps.homepage.apps.HomepageConfig",

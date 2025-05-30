@@ -1,6 +1,6 @@
 import django.conf
-import django.conf.urls.static
 import django.conf.urls.i18n
+import django.conf.urls.static
 import django.contrib
 import django.urls
 

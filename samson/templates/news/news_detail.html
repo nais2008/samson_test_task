@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/item.css' %}">
+{% endblock %}
+{% block content %}
+  <section class="main-info container">
+    <h3 align="center">{% translate 'Basic information' %}</h3>
+    <div class="left left-image">
+      <img src="{{ news.image.image.url }}" alt=" гг, без картинки ">
+      {% if news.image.image.url %}
+        {% comment "" %}
+
+        <a
+          href="{% url 'download:download_image' item.main_image.image.url|slice:'7:' %}"
+          class="btn btn-dark abs"
+        >
+          {% translate 'Download image' %}
+        </a>
+
+        {% endcomment %}
+      {% endif %}
+    </div>
+    <article class="right right-text">
+      <h3>{{ news.title }}</h3>
+      <div class="des">
+        <b>
+          {% translate 'Text :' %}
+        </b>
+        {{ news.about|safe }}
+      </div>
+    </article>
+  </section>
+{% endblock %}

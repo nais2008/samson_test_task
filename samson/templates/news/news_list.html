@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/list.css' %}">
+{% endblock %}
+{% block content %}
+  <section class="list-items container">
+    {% for item in news %}
+      {% ifchanged item.category.name %}
+        <h2>{{ item.category.name }}</h2>
+      {% endifchanged %}
+      {% include 'includes/card.html' with item=item %}
+    {% endfor %}
+  </section>
+{% endblock %}

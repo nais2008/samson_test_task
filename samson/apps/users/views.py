@@ -2,11 +2,15 @@ import datetime
 
 import django.contrib.auth.decorators
 import django.contrib.auth.models
+import django.contrib.messages
+import django.core.mail
 import django.shortcuts
 import django.utils.timezone
 from django.utils.translation import gettext_lazy as _
 
 import apps.users.forms
+
+__all__ = ["profile", "signup", "activate", "activate"]
 
 
 @django.contrib.auth.decorators.login_required
@@ -36,7 +40,7 @@ def profile(request):
 def signup(request):
     template = "users/signup.html"
 
-    form = apps.users.forms.UserRegistrationForm(request.POST or None)
+    form = apps.users.forms.UserCreationForm(request.POST or None)
 
     if form.is_valid() and request.method == "POST":
         user = form.save(active=django.conf.settings.DEFAULT_USER_IS_ACTIVE)
@@ -49,7 +53,7 @@ def signup(request):
         django.core.mail.send_mail(
             f"Активация учетной записи, {user.username}",
             f"{link}\n{user.username}",
-            django.conf.settings.SPAM_EMAIL,
+            django.conf.settings.MAIL,
             [user.email],
             fail_silently=False,
         )
@@ -72,7 +76,7 @@ def signup(request):
         )
 
     context = {
-        "title": _("Samson | SignUp"),
+        "title": _("SAMSON | SignUp"),
         "form": form,
     }
 
