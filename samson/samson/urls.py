@@ -14,6 +14,10 @@ urlpatterns = [
         django.urls.include("apps.homepage.urls"),
     ),
     django.urls.path(
+        "download/",
+        django.urls.include("apps.download.urls"),
+    ),
+    django.urls.path(
         "news/",
         django.urls.include("apps.news.urls"),
     ),

@@ -3,6 +3,11 @@ main {
   place-content: center;
 }
 
+.red{
+  color: tomato;
+  font-weight: 900;
+}
+
 .main-form {
   display: flex;
   flex-direction: column;

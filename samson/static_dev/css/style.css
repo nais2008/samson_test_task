@@ -98,6 +98,11 @@ li {
 	list-style: none;
 }
 
+.container{
+  max-width: 1440px;
+  margin: 10px auto;
+}
+
 .content {
 	position: relative;
   height: 100vh;

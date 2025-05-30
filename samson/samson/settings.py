@@ -32,6 +32,7 @@ DEFAULT_USER_IS_ACTIVE = get_true_or_false_env(
 MAIL = os.environ.get("DJANGO_MAIL", "your_mail@mail.ru")
 
 INSTALLED_APPS = [
+    "apps.download.apps.DownloadConfig",
     "apps.homepage.apps.HomepageConfig",
     "apps.news.apps.NewsConfig",
     "apps.users.apps.UsersConfig",

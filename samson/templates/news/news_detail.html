@@ -10,18 +10,14 @@
   <section class="main-info container">
     <h3 align="center">{% translate 'Basic information' %}</h3>
     <div class="left left-image">
-      <img src="{{ news.image.image.url }}" alt=" гг, без картинки ">
+      <img src="{{ news.image.image.url }}" alt="{% translate 'error' %}">
       {% if news.image.image.url %}
-        {% comment "" %}
-
         <a
-          href="{% url 'download:download_image' item.main_image.image.url|slice:'7:' %}"
+          href="{% url 'download:download_image' news.image.image.url|slice:'7:' %}"
           class="btn btn-dark abs"
         >
           {% translate 'Download image' %}
         </a>
-
-        {% endcomment %}
       {% endif %}
     </div>
     <article class="right right-text">
