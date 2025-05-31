@@ -39,9 +39,7 @@ class UserCreationForm(
 
     def save(self, commit=True, active=True):
         user = super().save(commit=False)
-        user.email = self.cleaned_data[
-            apps.users.models.User.email.field.name
-        ]
+        user.email = self.cleaned_data[apps.users.models.User.email.field.name]
         user.is_active = active
 
         if commit:

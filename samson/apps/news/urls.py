@@ -11,9 +11,7 @@ urlpatterns = [
         name="news-list",
     ),
     django.urls.path(
-        "<int:news_pk>/",
-        apps.news.views.news_detail,
-        name="news"
+        "<int:news_pk>/", apps.news.views.news_detail, name="news",
     ),
     django.urls.path(
         "search/",

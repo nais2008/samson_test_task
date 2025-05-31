@@ -38,4 +38,4 @@ max-line-length=79
 inline-quotes=double
 import-order-style=google
 max-expression-complexity=10
-application-import-names=apps.news,apps.users,apps.homepage,apps.core
+application-import-names=apps.news,apps.users,apps.homepage,apps.core,apps.download

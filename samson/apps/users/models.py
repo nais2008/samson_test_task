@@ -12,7 +12,8 @@ normalizer = apps.users.email_normalizer.EmailNormalizer()
 
 
 class User(
-    django.contrib.auth.models.AbstractUser, apps.core.models.BaseImageModel,
+    django.contrib.auth.models.AbstractUser,
+    apps.core.models.BaseImageModel,
 ):
 
     objects = apps.users.managers.UserManager()

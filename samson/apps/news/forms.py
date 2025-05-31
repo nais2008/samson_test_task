@@ -32,11 +32,12 @@ class NewsForm(django.forms.ModelForm):
             image_file = self.cleaned_data.get("image")
             if image_file:
                 apps.news.models.Image.objects.update_or_create(
-                    news=news_instance,
-                    defaults={'image': image_file}
+                    news=news_instance, defaults={"image": image_file},
                 )
-            elif 'image' in self.changed_data and not image_file:
-                apps.news.models.Image.objects.filter(news=news_instance).delete()
+            elif "image" in self.changed_data and not image_file:
+                apps.news.models.Image.objects.filter(
+                    news=news_instance,
+                ).delete()
 
         return news_instance
 

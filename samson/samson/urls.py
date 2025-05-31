@@ -31,7 +31,7 @@ urlpatterns += django.conf.urls.i18n.i18n_patterns(
     django.urls.path(
         "i18n/",
         django.urls.include("django.conf.urls.i18n"),
-        name="set_language"
+        name="set_language",
     ),
 )
 

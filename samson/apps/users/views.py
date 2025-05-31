@@ -61,8 +61,7 @@ def signup(request):
             request,
             (
                 _(
-                    "Account Activation Link"
-                    " sent to the specified email",
+                    "Account Activation Link sent to the specified email",
                 ),
             ),
         )

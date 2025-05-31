@@ -90,7 +90,7 @@ def create_news(request):
             if saved_instances:
                 django.contrib.messages.success(
                     request,
-                    django.utils.translation.gettext("All news were created successfully."),
+                    _("All news were created successfully."),
                 )
                 return django.shortcuts.redirect("news:news-list")
 
@@ -98,7 +98,7 @@ def create_news(request):
         formset = NewsFormSet(queryset=apps.news.models.News.objects.none())
 
     context = {
-        "title": django.utils.translation.gettext("SAMSIN | Create news"),
+        "title": _("SAMSIN | Create news"),
         "formset": formset,
     }
 
@@ -163,7 +163,6 @@ def update_news(request, news_pk):
     )
 
 
-
 @django.contrib.auth.decorators.login_required
 def delete_news(request, news_pk):
     if request.method != "POST":
@@ -183,4 +182,3 @@ def delete_news(request, news_pk):
 
     django.contrib.messages.success(request, _("News successfully deleted"))
     return django.shortcuts.redirect("news:news-list")
-
