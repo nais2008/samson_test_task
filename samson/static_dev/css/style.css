@@ -263,3 +263,20 @@ footer {
     gap: 120px;
   }
 }
+
+.messages{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message{
+  width: 100%;
+  background-color: var(--back-mess);
+  color: var(--text-color-mess);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--text-color-mess);
+  max-width: 1440px;
+  margin: 0 auto;
+}

@@ -15,4 +15,24 @@ urlpatterns = [
         apps.news.views.news_detail,
         name="news"
     ),
+    django.urls.path(
+        "search/",
+        apps.news.views.search,
+        name="search",
+    ),
+    django.urls.path(
+        "create/",
+        apps.news.views.create_news,
+        name="create",
+    ),
+    django.urls.path(
+        "<int:news_pk>/update/",
+        apps.news.views.update_news,
+        name="update",
+    ),
+    django.urls.path(
+        "<int:news_pk>/delete/",
+        apps.news.views.delete_news,
+        name="delete",
+    ),
 ]

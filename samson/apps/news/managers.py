@@ -32,3 +32,18 @@ class NewsManager(django.db.models.Manager):
                 apps.news.models.News.user.field.name,
             )
         )
+
+    def by_title_or_about(self, query):
+        return (
+            self.only(
+                "pk",
+                apps.news.models.News.title.field.name,
+                apps.news.models.News.source.field.name,
+                apps.news.models.News.data.field.name,
+                f"image__{apps.news.models.Image.image.field.name}",
+            )
+            .filter(
+                django.db.models.Q(title__icontains=query)
+                | django.db.models.Q(about__icontains=query),
+            )
+        )

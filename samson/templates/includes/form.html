@@ -1,17 +1,38 @@
 {% if messages %}
   <ul class="messages">
     {% for message in messages %}
-      <li {% if message.tags %}class="{{ message.tags }} alert alert-success"{% endif %}>{{ message }}</li>
+      <li
+        {% if message.tags %}
+          class="{{ message.tags }} alert alert-success"
+        {% endif %}
+      >
+        {{ message }}
+      </li>
     {% endfor %}
   </ul>
 {% endif %}
-{% for field in form %}
-  <div>
+
+{% for field in form.visible_fields %}
+  <div class="form-group">
     <label for="{{ field.id_for_label }}">
       {{ field.label }}
-      {% if field.field.required %}<span class="red">*</span>{% endif %} :
+      {% if field.field.required %}
+        <span class="red">*</span>
+      {% endif %}
+      :
     </label>
     {{ field }}
-    {% for error in field.errors %}<div class="danger">{{ error|escape }}</div>{% endfor %}
+
+    {% if field.help_text %}
+      <small class="help-text">{{ field.help_text }}</small>
+    {% endif %}
+
+    {% for error in field.errors %}
+      <div class="danger">{{ error|escape }}</div>
+    {% endfor %}
   </div>
+{% endfor %}
+
+{% for hidden in form.hidden_fields %}
+  {{ hidden }}
 {% endfor %}

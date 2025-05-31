@@ -1,3 +1,13 @@
+.wrapp{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .btn{
+    align-self: center;
+    padding: 10px 15px;
+  }
+}
 .list{
   display: grid;
   width: 100%;
@@ -6,6 +16,10 @@
     minmax(400px, 1fr)
   );
   gap: 20px;
+
+  div:has(#image-clear_id){
+    display: none;
+  }
 }
 
 .item{

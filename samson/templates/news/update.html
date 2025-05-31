@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+  <form class="main-form" method="post" enctype="multipart/form-data">
+    <h2>{% translate 'Create news' %}</h2>
+    {% csrf_token %}
+    {% with form=news_form %}
+      {% include "includes/form.html" %}
+    {% endwith %}
+    {% with form=image_form %}
+      {% include "includes/form.html" %}
+    {% endwith %}
+    <button
+      type="submit"
+      class="btn btn_submit"
+    >
+      {% translate 'Update' %}
+    </button>
+  </form>
+{% endblock content %}

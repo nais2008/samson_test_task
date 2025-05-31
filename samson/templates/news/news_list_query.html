@@ -1,0 +1,7 @@
+{% load i18n %}
+
+{% for item in news %}
+  {% include 'includes/card.html' with item=item %}
+{% empty %}
+  <h1>{% translate 'Nothing found' %}</h1>
+{% endfor %}

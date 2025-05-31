@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+  <form class="main-form" method="post" enctype="multipart/form-data" id="news-form">
+    <h2 align="center">{% translate 'Create news' %}</h2>
+    {% csrf_token %}
+
+    <div id="form-container">
+      {{ formset.management_form }}
+      {% for form in formset.forms %}
+        <div class="news-form-block">
+          {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
+          {% include "includes/form.html" with form=form %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <button type="button" class="add-form-btn" id="add-form">+</button>
+
+    <button type="submit" class="btn btn_submit">
+      {% translate 'Create' %}
+    </button>
+  </form>
+
+  <template id="empty-form-template">
+    <div class="news-form-block">
+      __FORM_HTML__
+    </div>
+  </template>
+{% endblock content %}
+
+{% block extra_js %}
+  <script>
+    const formHtml = `{{ formset.empty_form.as_p|escapejs }}`;
+  </script>
+  <script src="{% static 'js/create_news.js' %}"></script>
+{% endblock extra_js %}

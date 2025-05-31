@@ -1,14 +1,26 @@
 {% extends 'base.html' %}
+
 {% load static %}
+{% load i18n %}
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'css/list.css' %}">
 {% endblock extra_css %}
 
 {% block content %}
-  <section class="list container">
-    {% for item in news %}
-      {% include 'includes/card.html' with item=item %}
-    {% endfor %}
+<section class="wrapp container">
+    {% if user.is_superuser %}
+      <a href="{% url 'news:create' %}" class="btn">{% translate 'Create news' %}</a>
+    {% endif %}
+    <input
+      type="search"
+      name="search"
+      placeholder="{% translate 'Search' %}"
+      id=""
+      hx-get="{% url 'news:search' %}"
+      hx-trigger="keyup changed delay:100ms"
+      hx-target="#list"
+    />
+    <div class="list" id="list"></div>
   </section>
 {% endblock content %}

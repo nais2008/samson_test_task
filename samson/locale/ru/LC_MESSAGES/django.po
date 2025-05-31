@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 03:02+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\apps\core\apps.py:10
+msgid "Другое"
+msgstr "Core"
+
+#: .\apps\core\models.py:19
+msgid "Картинка/аватарка"
+msgstr "image/avatar"
+
+#: .\apps\download\apps.py:10
+msgid "Скачать"
+msgstr "Download"
+
+#: .\apps\homepage\apps.py:10
+msgid "Главная"
+msgstr "Homepage"
+
+#: .\apps\news\apps.py:10 .\templates\includes\header.html:9
+msgid "Новости"
+msgstr "News"
+
+#: .\apps\news\models.py:15 .\apps\news\models.py:17
+msgid "Дата создания"
+msgstr "date created"
+
+#: .\apps\news\models.py:21
+msgid "источник"
+msgstr "source"
+
+#: .\apps\news\models.py:23
+msgid "Напишите источник новости"
+msgstr "Write source news"
+
+#: .\apps\news\models.py:26
+msgid "заголовок"
+msgstr "title"
+
+#: .\apps\news\models.py:28
+msgid "Напишите зааголовок новости"
+msgstr "Write title news"
+
+#: .\apps\news\models.py:31
+msgid "информация"
+msgstr "about"
+
+#: .\apps\news\models.py:32
+msgid "Напишите информацию о новости"
+msgstr "Write abaout news"
+
+#: .\apps\news\models.py:35
+msgid "ссылка"
+msgstr "link"
+
+#: .\apps\news\models.py:36
+msgid "Напишите ссылку новости"
+msgstr "Write link news"
+
+#: .\apps\news\models.py:40 .\apps\news\models.py:43 .\apps\users\models.py:34
+msgid "пользователь"
+msgstr "user"
+
+#: .\apps\news\models.py:49 .\apps\news\models.py:50
+msgid "новость"
+msgstr "news"
+
+#: .\apps\news\models.py:64
+msgid "Нет картинки или картинка не была найденна"
+msgstr "No image or image not found"
+
+#: .\apps\news\models.py:66 .\apps\news\models.py:73
+msgid "картинка"
+msgstr "image"
+
+#: .\apps\news\models.py:78
+msgid "картинка новости"
+msgstr "image news"
+
+#: .\apps\news\models.py:79
+msgid "картинки новостей"
+msgstr "images news"
+
+#: .\apps\news\views.py:17
+msgid "SAMSON | Новости"
+msgstr "SAMSON | News"
+
+#: .\apps\news\views.py:35
+msgid "SAMSON | О новости"
+msgstr "SAMSON | News detail"
+
+#: .\apps\news\views.py:93
+msgid "Все новости были успешно созданы"
+msgstr "All news were created successfully."
+
+#: .\apps\news\views.py:101
+msgid "SAMSON | Создание новости"
+msgstr "SAMSIN | Create news"
+
+#: .\apps\news\views.py:149
+msgid "Обновление новости"
+msgstr "News update"
+
+#: .\apps\news\views.py:154
+msgid "SAMSIN | Обновление новости"
+msgstr "SAMSIN | Update news"
+
+#: .\apps\news\views.py:179
+msgid "Вам не разрешено удалять эту новость"
+msgstr "You are not allowed to delete this news"
+
+#: .\apps\news\views.py:184
+msgid "Новость успешно удалена"
+msgstr "News successfully deleted"
+
+#: .\apps\users\apps.py:10
+msgid "Пользователи"
+msgstr "Users"
+
+#: .\apps\users\forms.py:24
+msgid "Пользователь уже существует"
+msgstr "User already exists"
+
+#: .\apps\users\forms.py:35
+msgid "Пароли не совпадают"
+msgstr "Passwords do not match"
+
+#: .\apps\users\forms.py:90
+msgid "User already exists"
+msgstr "Пользователь уже существует"
+
+#: .\apps\users\forms.py:101
+msgid "Пользователь с такой почтой уже существует"
+msgstr "User with this email already exists"
+
+#: .\apps\users\models.py:21
+msgid "почта"
+msgstr "email address"
+
+#: .\apps\users\models.py:25
+msgid "Уникальная почта"
+msgstr "Unique email address"
+
+#: .\apps\users\models.py:28
+msgid "дата рождения"
+msgstr "birthday"
+
+#: .\apps\users\models.py:29
+msgid "Напишите дату рождения"
+msgstr "write birthday"
+
+#: .\apps\users\models.py:35
+msgid "пользователи"
+msgstr "users"
+
+#: .\apps\users\views.py:32
+msgid "Samson | Профиль"
+msgstr "Samson | Profile"
+
+#: .\apps\users\views.py:64
+msgid "Ссылка для активации учетной записи отправлена ​​на указанный адрес электронной почты"
+msgstr "Account Activation Link sent to the specified email"
+
+#: .\apps\users\views.py:75
+msgid "Произошла ошибка при отправке формы"
+msgstr "There was an error submitting the form."
+
+#: .\apps\users\views.py:79
+msgid "SAMSON | Регистрация"
+msgstr "SAMSON | SignUp"
+
+#: .\samson\settings.py:130
+msgid "Русский"
+msgstr "Russian"
+
+#: .\samson\settings.py:131
+msgid "Английский"
+msgstr "English"
+
+#: .\templates\base.html:30 .\templates\base.html:31
+msgid "Нету контента на сегодня"
+msgstr "GG, no content today :("
+
+#: .\templates\homepage\main.html:11
+msgid "Смотрите новости данной компании"
+msgstr "Check news this company"
+
+#: .\templates\homepage\main.html:12
+msgid "Смотреть новости"
+msgstr "Check news"
+
+#: .\templates\includes\card.html:6 .\templates\includes\header.html:29
+#: .\templates\includes\header.html:35 .\templates\news\news_detail.html:13
+#: .\templates\users\profile.html:12 .\templates\users\profile.html:16
+msgid "ошибка"
+msgstr "error"
+
+#: .\templates\includes\card.html:11
+msgid "Создано :"
+msgstr "Create at :"
+
+#: .\templates\includes\card.html:16
+msgid "Посмотреть больше информации"
+msgstr "View more information"
+
+#: .\templates\includes\footer.html:8
+msgid "Да, это мой сайт, вопросы?"
+msgstr "Yes, this is my site, questions?"
+
+#: .\templates\includes\header.html:41 .\templates\users\login.html:9
+#: .\templates\users\login.html:18
+#: .\templates\users\password_reset_complete.html:11
+#: .\templates\users\password_reset_done.html:14
+msgid "Вход"
+msgstr "Log In"
+
+#: .\templates\includes\header.html:44 .\templates\users\signup.html:9
+#: .\templates\users\signup.html:20
+msgid "Регистрация"
+msgstr "Sign Up"
+
+#: .\templates\news\create.html:12 .\templates\news\news_list.html:13
+#: .\templates\news\update.html:12
+msgid "Создать новость"
+msgstr "Create news"
+
+#: .\templates\news\create.html:28
+msgid "Создать"
+msgstr "Create"
+
+#: .\templates\news\news_detail.html:10
+msgid "Информация"
+msgstr "Basic information"
+
+#: .\templates\news\news_detail.html:21
+msgid "Скачать изображение"
+msgstr "Download image"
+
+#: .\templates\news\news_detail.html:30
+msgid "О новости :"
+msgstr "About :"
+
+#: .\templates\news\news_detail.html:36
+msgid "Источник :"
+msgstr "Source :"
+
+#: .\templates\news\news_detail.html:42
+msgid "Ссылка :"
+msgstr "Link :"
+
+#: .\templates\news\news_detail.html:50
+msgid "Редактировать новость"
+msgstr "Edit news"
+
+#: .\templates\news\news_detail.html:51
+msgid "Удалить новость"
+msgstr "Delete news"
+
+#: .\templates\news\news_detail.html:59
+msgid "Вы уверены что хотите удалить новость?"
+msgstr "Are you sure you want to delete this news?"
+
+#: .\templates\news\news_detail.html:62
+msgid "Да, удалить"
+msgstr "Yes, delete"
+
+#: .\templates\news\news_detail.html:63
+msgid "Нет"
+msgstr "No"
+
+#: .\templates\news\news_list.html:18
+msgid "Поиск"
+msgstr "Search"
+
+#: .\templates\news\news_list_query.html:6
+msgid "Ничего не найденно"
+msgstr "Nothing found"
+
+#: .\templates\news\update.html:24
+msgid "Редактировать"
+msgstr "Update"
+
+#: .\templates\users\login.html:15
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: .\templates\users\login.html:16
+msgid "Нет аккаунта?"
+msgstr "Don`t you have an account?"
+
+#: .\templates\users\password_change.html:9
+#: .\templates\users\password_reset_confirm.html:9
+msgid "Придумайте новый пароль"
+msgstr "Come up with a new password"
+
+#: .\templates\users\password_change.html:15
+#: .\templates\users\password_reset_confirm.html:15
+msgid "Изменить"
+msgstr "Сhange"
+
+#: .\templates\users\password_change_done.html:9
+#: .\templates\users\password_reset_complete.html:9
+msgid "Вы изменили свой пароль!"
+msgstr "You have changed your password!"
+
+#: .\templates\users\password_reset.html:15
+msgid "Сбросить"
+msgstr "Reset"
+
+#: .\templates\users\password_reset_done.html:9
+msgid "Вам было отправлено письмо со ссылкой для сброса пароля"
+msgstr "An email has been sent to you with a link to reset your password"
+
+#: .\templates\users\password_reset_done.html:11
+msgid ""
+"Если вы не получили письмо, убедитесь, что вы ввели правильный адрес "
+"вы зарегистрировались и проверьте папку со спамом"
+msgstr ""
+"If you haven`t received the email, make sure you entered the correct address "
+"you registered with and check your spam folder"
+
+#: .\templates\users\profile.html:19
+msgid "Изменить пароль"
+msgstr "Change the password"
+
+#: .\templates\users\profile.html:20
+msgid "Выйти"
+msgstr "Log Out"
+
+#: .\templates\users\profile.html:27
+msgid "Изменить информацию профиля"
+msgstr "Change Profile information"
+
+#: .\templates\users\signup.html:15
+msgid "Обязательное поле"
+msgstr "required field"
+
+#: .\templates\users\signup.html:18
+msgid "У вас есть аккаунт?"
+msgstr "Do you have an account?"
